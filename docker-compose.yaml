@@ -23,7 +23,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - "9965:9965"
+      - "9965:3000"
       - "9966:9966"
     depends_on:
        - db
