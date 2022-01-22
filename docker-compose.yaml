@@ -10,7 +10,7 @@ services:
     container_name: gitea-server
     restart: always
     environment:
-      - SSH_PORT=9966
+      - SSH_PORT=2222
       - DB_TYPE=postgres
       - DB_HOST=db:5432
       - DB_USER=gitea
@@ -23,8 +23,8 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - "9965:3000"
-      - "9966:9966"
+      - "8080:3000"
+      - "2222:2222"
     depends_on:
        - db
 
