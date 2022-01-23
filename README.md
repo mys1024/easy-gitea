@@ -12,7 +12,9 @@ Provide `docker-compose.yaml` based on [Installation with Docker - Gitea Documen
    cd /path/to/proper/directory
    ```
 
-3. Run
+3. Edit .env file to configure environment variables.
+
+4. Run
 
     ```bash
     git clone https://github.com/mys1024/docker-gitea.git \
