@@ -1,6 +1,6 @@
 # docker-gitea
 
-Provide `docker-compose.yaml` based on [Installation with Docker - Gitea Document](https://docs.gitea.io/en-us/install-with-docker/), to run a **Gitea** server quickly.
+Provide `docker-compose.yaml` based on [Installation with Docker - Gitea Document](https://docs.gitea.io/en-us/install-with-docker/), to start a **Gitea** server quickly.
 
 ## Usage
 
