@@ -1,36 +1,27 @@
-# docker-gitea
+# easy-postgresql
 
-Provide `docker-compose.yaml` based on [Installation with Docker - Gitea Document](https://docs.gitea.io/en-us/install-with-docker/), to start a **Gitea** server quickly.
+Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker Compose**](https://docs.docker.com/compose/).
 
 ## Usage
 
-1. Install docker and docker-compose (or podman and podman-compose).
+1. Create a `.env` file in the root of the project with the following configurations:
 
-2. Change to a proper directory.
+    ```sh
+    # Gitea
+    GITEA_IMAGE=docker.io/gitea/gitea:1.22
+    GITEA_PORT_SSH=22
+    GITEA_PORT_HTTP=3000
 
-   ```bash
-   cd /path/to/proper/directory
-   ```
-
-3. Clone and change directory to this repository.
-
-    ```bash
-    git clone https://github.com/mys1024/docker-gitea.git && \
-    cd docker-gitea
+    # DB
+    POSTGRES_IMAGE=docker.io/library/postgres:17
     ```
 
-4. Edit `.env` file to configure environment variables.
+2. Startup:
 
-    ```bash
-    vim .env
-    ```
-
-4. Run Gitea server.
-
-    ```bash
+    ```sh
     docker-compose up -d
-    # or
-    podman-compose up -d
     ```
 
-6. Access your Gitea via browser.
+## License
+
+[MIT](./LICENSE) License &copy; 2024-PRESENT [mys1024](https://github.com/mys1024)
