@@ -4,7 +4,7 @@ Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker 
 
 ## Usage
 
-1. Create a `.env` file in the root of the project with the following configurations:
+1. **(Optional)** Create a `.env` file with your custom configurations:
 
     ```sh
     # Gitea
