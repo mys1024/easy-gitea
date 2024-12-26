@@ -1,4 +1,4 @@
-# easy-postgresql
+# easy-gitea
 
 Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker Compose**](https://docs.docker.com/compose/).
 
