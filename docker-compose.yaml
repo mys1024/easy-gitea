@@ -1,4 +1,4 @@
-name: compose_gitea
+name: easy_gitea
 
 services:
   server:
