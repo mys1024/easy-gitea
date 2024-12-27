@@ -7,8 +7,6 @@ Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker 
 1. **(Optional)** Create a `.env` file with your custom configurations:
 
     ```sh
-    POSTGRES_IMAGE=docker.io/library/postgres:17
-    GITEA_IMAGE=docker.io/gitea/gitea:1.22
     GITEA_PORT_SSH=22
     GITEA_PORT_HTTP=3000
     ```
