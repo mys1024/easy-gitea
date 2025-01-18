@@ -17,7 +17,7 @@ services:
       - ./volumes/gitea:/data
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - ${GITEA_PORT_SSH:-2222}:${GITEA_PORT_SSH:-2222} # SSH
+      - ${GITEA_PORT_SSH:-2222}:22 # SSH
       - ${GITEA_PORT_HTTP:-3000}:${GITEA_PORT_HTTP:-3000} # HTTP
     depends_on:
       - db
