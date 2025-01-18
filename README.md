@@ -4,11 +4,11 @@ Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker 
 
 ## Usage
 
-1. **(Optional)** Create a `.env` file with your custom configurations:
+1. Create a file named `.env` with your custom configurations:
 
     ```sh
-    GITEA_PORT_SSH=22
-    GITEA_PORT_HTTP=3000
+    GITEA_PORT_SSH=22 # optional, defaults to "22"
+    GITEA_PORT_HTTP=3000 # optional, defaults to "3000"
     ```
 
 2. Startup:
