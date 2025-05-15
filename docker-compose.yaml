@@ -1,9 +1,6 @@
-name: easy_gitea
-
 services:
-  server:
-    image: docker.io/gitea/gitea:1.23
-    container_name: gitea_server
+  gitea:
+    image: docker.io/gitea/gitea:1.23-rootless
     restart: always
     environment:
       - GITEA__database__DB_TYPE=postgres
@@ -24,7 +21,6 @@ services:
 
   db:
     image: docker.io/library/postgres:17
-    container_name: gitea_db
     restart: always
     environment:
       - POSTGRES_USER=gitea
