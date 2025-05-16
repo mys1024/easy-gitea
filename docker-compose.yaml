@@ -4,7 +4,7 @@ services:
     restart: always
     environment:
       - GITEA__database__DB_TYPE=postgres
-      - GITEA__database__HOST=db:5432
+      - GITEA__database__HOST=/var/run/postgresql
       - GITEA__database__NAME=gitea
       - GITEA__database__USER=gitea
       - GITEA__database__PASSWD=gitea
@@ -12,6 +12,7 @@ services:
       - GITEA__server__HTTP_PORT=${GITEA_PORT_HTTP:-3000}
     volumes:
       - ./volumes/gitea:/data
+      - ./volumes/postgres_run:/var/run/postgresql
       - /etc/localtime:/etc/localtime:ro
     ports:
       - ${GITEA_PORT_SSH:-2222}:22 # SSH
@@ -28,3 +29,4 @@ services:
       - POSTGRES_DB=gitea
     volumes:
       - ./volumes/postgres:/var/lib/postgresql/data
+      - ./volumes/postgres_run:/var/run/postgresql
