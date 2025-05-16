@@ -11,7 +11,7 @@ Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker 
     GITEA_PORT_HTTP=3000 # optional, defaults to "3000"
     ```
 
-2. Startup:
+2. Start:
 
     ```sh
     docker-compose up -d
