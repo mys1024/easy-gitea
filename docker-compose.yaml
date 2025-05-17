@@ -1,6 +1,6 @@
 services:
   gitea:
-    image: docker.io/gitea/gitea:1.23-rootless
+    image: docker.io/gitea/gitea:1.23
     restart: always
     environment:
       - GITEA__database__DB_TYPE=postgres
@@ -11,8 +11,9 @@ services:
       - GITEA__server__SSH_PORT=${GITEA_PORT_SSH:-2222}
       - GITEA__server__HTTP_PORT=${GITEA_PORT_HTTP:-3000}
     volumes:
-      - ./volumes/gitea:/data
-      - ./volumes/postgres_run:/var/run/postgresql
+      - ./volumes/gitea/data:/var/lib/gitea
+      - ./volumes/gitea/config:/etc/gitea
+      - ./volumes/db/uds:/var/run/postgresql
       - /etc/localtime:/etc/localtime:ro
     ports:
       - ${GITEA_PORT_SSH:-2222}:22 # SSH
@@ -28,5 +29,5 @@ services:
       - POSTGRES_PASSWORD=gitea
       - POSTGRES_DB=gitea
     volumes:
-      - ./volumes/postgres:/var/lib/postgresql/data
-      - ./volumes/postgres_run:/var/run/postgresql
+      - ./volumes/db/data:/var/lib/postgresql/data
+      - ./volumes/db/uds:/var/run/postgresql
