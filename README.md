@@ -1,6 +1,6 @@
 # easy-gitea
 
-Easily startup a [**Gitea**](https://about.gitea.com/) container with [**Docker Compose**](https://docs.docker.com/compose/).
+Easily start a [**Gitea**](https://about.gitea.com/) container with [**Docker Compose**](https://docs.docker.com/compose/).
 
 ## Usage
 
